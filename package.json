@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "env-cmd -f ./config/dev.env nodemon src/index.js"
+    "dev": "env-cmd -f ./config/dev.env nodemon src/index.js",
+    "test": "env-cmd -f ./config/test.env jest --testEnvironment=node --watch --runInBand"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "keywords": [],
   "author": "",
@@ -15,12 +19,14 @@
     "bcryptjs": "^2.4.3",
     "env-cmd": "^10.1.0",
     "express": "^4.18.1",
+    "jest": "^23.6.0",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^4.8.0",
     "mongoose": "^6.4.6",
     "multer": "^1.4.5-lts.1",
     "nodemon": "^2.0.19",
     "sequelize": "^6.21.3",
+    "supertest": "^6.2.4",
     "validator": "^13.7.0"
   }
 }
